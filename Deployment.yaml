@@ -1,0 +1,23 @@
+apiVerion: apps/v1
+kind: Deployment
+metadata:
+  name: jatin
+spec:
+  replicas: 2
+  selector:
+    matchLables:
+      app: jatin
+  template:
+    metadata:
+      labels: 
+        app: jatin
+    spec:
+      containers:
+      - name: jatin
+        image: jatin7011/pipeline
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+
+
+    
